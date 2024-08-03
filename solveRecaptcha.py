@@ -3,7 +3,7 @@ from twocaptcha import TwoCaptcha
 
 
 def solveRecaptcha(sitekey, url):
-    api_key = "46d1477957abf0d7360f4ee4cc140873"
+    api_key = "YOUR_API_KEY"
 
     solver = TwoCaptcha(api_key)
 
