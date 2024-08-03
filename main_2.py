@@ -8,16 +8,16 @@ from solveRecaptcha import solveRecaptcha
 
 # List of proxies with authentication details
 proxies = [
-    {"host": "45.127.248.127", "port": 5128, "username": "dgyeipmd", "password": "qyxsdfrm1yhc"},
-    {"host": "64.64.118.149", "port": 6732, "username": "dgyeipmd", "password": "qyxsdfrm1yhc"},
-    {"host": "157.52.253.244", "port": 6204, "username": "dgyeipmd", "password": "qyxsdfrm1yhc"},
-    {"host": "167.160.180.203", "port": 6754, "username": "dgyeipmd", "password": "qyxsdfrm1yhc"},
-    {"host": "166.88.58.10", "port": 5735, "username": "dgyeipmd", "password": "qyxsdfrm1yhc"},
-    {"host": "173.0.9.70", "port": 5653, "username": "dgyeipmd", "password": "qyxsdfrm1yhc"},
-    {"host": "45.151.162.198", "port": 6600, "username": "dgyeipmd", "password": "qyxsdfrm1yhc"},
-    {"host": "204.44.69.89", "port": 6342, "username": "dgyeipmd", "password": "qyxsdfrm1yhc"},
-    {"host": "173.0.9.209", "port": 5792, "username": "dgyeipmd", "password": "qyxsdfrm1yhc"},
-    {"host": "206.41.172.74", "port": 6634, "username": "dgyeipmd", "password": "qyxsdfrm1yhc"},
+    {"host": "ip_address", "port": port, "username": "username", "password": "password"},
+    {"host": "ip_address", "port": port, "username": "username", "password": "password"},
+    {"host": "ip_address", "port": port, "username": "username", "password": "password"},
+    {"host": "ip_address", "port": port, "username": "username", "password": "password"},
+    {"host": "ip_address", "port": port, "username": "username", "password": "password"},
+    {"host": "ip_address", "port": port, "username": "username", "password": "password"},
+    {"host": "ip_address", "port": port, "username": "username", "password": "password"},
+    {"host": "ip_address", "port": port, "username": "username", "password": "password"},
+    {"host": "ip_address", "port": port, "username": "username", "password": "password"},
+    {"host": "ip_address", "port": port, "username": "username", "password": "password"},
 ]
 
 
@@ -74,10 +74,10 @@ def create_proxy_extension(proxy):
     );
     """
 
-    with open(r"C:\Users\karth\Downloads\Reference_Python_Project\proxy_sever\proxy_auth_extension_2\manifest.json", "w") as f:
+    with open(r"..\manifest.json", "w") as f:
         f.write(manifest_json)
 
-    with open(r"C:\Users\karth\Downloads\Reference_Python_Project\proxy_sever\proxy_auth_extension_2\background.js", "w") as f:
+    with open(r"..\background.js", "w") as f:
         f.write(background_js)
 
 
@@ -86,7 +86,7 @@ proxy = random.choice(proxies)
 create_proxy_extension(proxy)
 
 # Path to the proxy authentication extension
-proxy_auth_extension_2 = r"C:\Users\karth\Downloads\Reference_Python_Project\proxy_sever\proxy_auth_extension_2"
+proxy_auth_extension_2 = r"..\proxy_auth_extension_2"
 
 chrome_options = Options()
 chrome_options.add_argument(f'--load-extension={proxy_auth_extension_2}')
